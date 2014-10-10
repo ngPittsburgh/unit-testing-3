@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Directives Testing</title>
+	<link rel="stylesheet" href="bower_components/foundation/css/normalize.css">
+	<link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+	<link rel="stylesheet" href="site.css">
+</head>
+<body ng-app="app">
+
+<div ng-controller="CatGalleryCtrl as catGalleryCtrl">
+	<div class="row">
+		<cat-box class="small-3 columns" first-label="First Name" second-label="Last Name" return-action="catGalleryCtrl.addCat(catModel)"></cat-box>
+		<div class="small-9 columns">
+			<ul class="small-block-grid-4">
+				<li ng-repeat="cat in catGalleryCtrl.cats">
+					<img ng-src="{{cat.imgSrc}}">
+					{{cat.firstName}} {{cat.lastName}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+	
+<script src="bower_components/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

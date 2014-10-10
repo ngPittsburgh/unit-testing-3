@@ -1,0 +1,15 @@
+.cat-box {
+	width: 200px;
+	padding: 10px;
+	background-color: #eee;
+}
+
+.cat-box img {
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+
+.cat-box button {
+	width: 100%;
+}
